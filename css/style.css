@@ -1,0 +1,466 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #1F1E1E;
+    
+} 
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+max-width: 1140px;
+margin: auto;
+padding: 0 5px;
+}
+
+.header{
+    background-image: url(../images/header-1.jpg);
+    background-repeat: no-repeat;
+    background-position:30% 70%;
+    background-size: cover;
+   
+}
+.header__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.header__top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 0 5px;
+    max-height: 150px;
+}
+
+.logo{
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.logo__img{
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.header__phone{
+    font-size: 16px;
+    line-height: 130%;
+    color: white;
+    font-weight: 700;
+}
+
+.header__phone-number{
+    font-weight:400;
+    margin-left: 19px;
+    padding: 12px 31px 13px;
+    background-color: #b8b49e;
+    border-radius: 22px;
+    border: solid rgb(212, 175, 55) 1px;
+}
+
+.menu{
+width: 100%;
+border-top: 1px solid #fff;
+border-bottom: 1px solid #fff;
+margin-top: 10px;
+padding: 27px 0 24px;
+}
+
+.menu__list{
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+font-size: 16;
+color: ivory;
+}
+
+.header__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    font-size: 90;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding-top: 15px;
+    color:#464646;
+}
+
+
+
+/*O nas*/
+.about__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 15px 10px 12px 10px;
+}
+.about__zagolovok{
+    font-weight: 600;
+    font-size: 19px;
+    max-width: 700px;
+    margin-bottom: 20px;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+.about__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-image: url(../images/O_nas_background.png);
+    background-repeat: no-repeat;
+    background-position:30% 70%;
+    background-size: cover;
+}
+
+.about__opis{
+    font-weight: 700;
+    font-size: 17px;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding: 15px 0 0 0;
+    text-align: center;
+    color:rgb(6, 4, 32);
+
+}
+
+.about__inner ul{
+    padding: 15px 15px 15px 20px;
+    color:brown;
+
+
+}
+
+/*gallery*/
+.section.gallery{
+    position: relative;
+    padding: 45px 0;
+}
+
+.gallery__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 15px 10px 12px 10px;
+}
+
+
+.gallery__inner{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   overflow: hidden;
+   font-size: 0;
+   margin-top: 10px ;
+}
+
+.gallery__item{
+    display: block;
+    flex: 25%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 100px;
+    padding: 1px 1px 1px 1px;
+}
+
+.gallery__item__hover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity .5s ease ;
+    z-index: 2;
+    
+}
+
+.gallery__item:hover .gallery__item__hover{
+    opacity: 1;
+}
+
+.gallery__item:hover img{
+    transform: scale(1.3) rotate(5deg);
+}
+.gallery__item img{
+    max-width: 100%;
+    height: auto;
+    transition: all .5s ease;
+}
+
+@media (max-width:991px){
+    .gallery__item{
+        flex: 33.3%;
+    }
+}
+
+@media (max-width:760px){
+    .gallery__item{
+        flex: 50%;
+    }
+}
+
+@media (max-width:530px){
+    .gallery__item{
+        flex: 100%;
+    }
+}
+
+
+/*Etapy pracy*/
+.etapy__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 15px 10px 12px 10px;
+
+}
+.etapy__inner{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-height: 364px;
+    max-width: 1140;
+    background-image: url(../images/background-etapy.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.etapy__img{
+    max-height: 380px;
+    max-width:30%;
+}
+
+.etapy__table{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 362px;
+    max-width: 70%;
+}
+
+.etapy__cyfry{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.etapy__num{
+    background-color: #fff;
+    border: 1px solid #919191;
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    line-height: 62px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 0 0 0;
+    font-size: 26px;
+    margin: 0 0 0 0;
+}
+
+.etapy__num__tittle{
+    min-height: 40px;
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    color:antiquewhite;
+    text-align: center;
+}
+
+
+/*Dane kontaktowe*/
+
+.kontakty__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 15px 10px 12px 10px;
+}
+
+.kontakty__inner{
+    display: flex;
+    justify-content: space-between;
+    max-height: 364px;
+    max-width: 1140;
+}
+
+.adres{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 380px;
+    max-width: 380px;
+    border-right: 2px solid #bebebe;
+}
+.adres__img{
+    padding: 20px 20px 30px 20px;
+}
+.adres__title{
+    font-weight: 700;
+    font-size: 90;
+    color: #7e7777;
+}
+
+.telefon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 380px;
+    max-width: 380px;
+    border-right: 2px solid #bebebe;
+}
+.telefon__img{
+    padding: 20px 20px 30px 20px;    
+}
+.telefon__title{
+    font-weight: 700;
+    font-size: 90;
+    color: #7e7777;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 380px;
+    max-width: 380px;
+}
+
+.email__img{
+    padding: 20px 20px 30px 20px;
+}
+.email__title{
+    font-weight: 700;
+    font-size: 90;
+    color: #7e7777;
+}
+
+/*Mapa*/
+
+.map{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map__title{
+    font-family: 'PT Serif', serif;
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 130%;
+    text-align: center;
+    margin-bottom: auto;
+    padding: 15px 10px 12px 10px;
+}
+.map__iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:inherit;
+}
+
+
+/*Zapytenia medialne*/
+
+@media (max-width: 768px){
+
+.etapy__img{
+display: none;}
+}
+.etapy__table{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+@media (max-width: 600px) {
+.header__phone span{
+    display: none;
+}
+
+.menu__list{
+    font-size:13px ;
+}
+.header{
+    background-position:center;
+}
+
+
+.adres__title{
+    font-size:13px ;  
+}
+.telefon__title{
+    font-size:13px ;  
+}
+
+.email__title{
+    font-size:13px ;  
+}
+.adres__p{
+    font-size:10px ;
+}
+.telefon__p{
+    font-size:10px ;
+}
+.email__p{
+    font-size:10px ;
+}
+
+
+}
+
+@media (max-width: 480px) {
+    .menu__list{
+        font-size:10px ;
+    }
+    .header__top{
+        justify-content: center;
+    }
+    .Kontakty{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .adres__title{
+        font-size:10px ;  
+    }
+}
